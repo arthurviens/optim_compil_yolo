@@ -1,1 +1,91 @@
-# optim_compil_yolo
+# Optimizing YOLO with a Deep Learning Compiler
+
+This repository offers some initial documentation, references and tools in preparation for an internship at the centre de recherche en informatique (CRI) Mines Paris - PSL.
+
+## References
+### YOLO Architectures
+
+[1] - Terven, J., Córdova-Esparza, D. M., & Romero-González, J. A. (2023). A comprehensive review of yolo architectures in computer vision: From yolov1 to yolov8 and yolo-nas. Machine learning and knowledge extraction, 5(4), 1680-1716.
+
+[2] - Redmon, J., Divvala, S., Girshick, R., & Farhadi, A. (2016). You only look once: Unified, real-time object detection. In Proceedings of the IEEE conference on computer vision and pattern recognition (pp. 779-788).
+
+[3] - Redmon, J., & Farhadi, A. (2017). YOLO9000: better, faster, stronger. In Proceedings of the IEEE conference on computer vision and pattern recognition (pp. 7263-7271).
+
+[4] - Redmon, J., & Farhadi, A. (2018). Yolov3: An incremental improvement. arXiv preprint arXiv:1804.02767.
+
+[5] - Bochkovskiy, A., Wang, C. Y., & Liao, H. Y. M. (2020). Yolov4: Optimal speed and accuracy of object detection. arXiv preprint arXiv:2004.10934.
+
+### Deep Learning Compilers
+[6] - Li, M., Liu, Y., Liu, X., Sun, Q., You, X., Yang, H., ... & Qian, D. (2020). The deep learning compiler: A comprehensive survey. IEEE Transactions on Parallel and Distributed Systems, 32(3), 708-727.
+
+[7] - Ragan-Kelley, J., Barnes, C., Adams, A., Paris, S., Durand, F., & Amarasinghe, S. (2013). Halide: a language and compiler for optimizing parallelism, locality, and recomputation in image processing pipelines. Acm Sigplan Notices, 48(6), 519-530. <br/>
++ See video below
+
+[8] - Chen, T., Moreau, T., Jiang, Z., Zheng, L., Yan, E., Shen, H., ... & Krishnamurthy, A. (2018). {TVM}: An automated {End-to-End} optimizing compiler for deep learning. In 13th USENIX Symposium on Operating Systems Design and Implementation (OSDI 18) (pp. 578-594).
+
+[9] - Roesch, J., Lyubomirsky, S., Weber, L., Pollock, J., Kirisame, M., Chen, T., & Tatlock, Z. (2018, June). Relay: A new ir for machine learning frameworks. In Proceedings of the 2nd ACM SIGPLAN international workshop on machine learning and programming languages (pp. 58-68).
+
+[10] - Feng, S., Hou, B., Jin, H., Lin, W., Shao, J., Lai, R., ... & Chen, T. (2023, January). Tensorir: An abstraction for automatic tensorized program optimization. In Proceedings of the 28th ACM International Conference on Architectural Support for Programming Languages and Operating Systems, Volume 2 (pp. 804-817).
+
+[11] - Lai, R., Shao, J., Feng, S., Lyubomirsky, S. S., Hou, B., Lin, W., ... & Chen, T. (2023). Relax: composable abstractions for end-to-end dynamic machine learning. arXiv preprint arXiv:2311.02103.
+
+### Memory optimizations
+Incoming
+
+## Other learning material
+- An interesting description of optimization and Halide : https://www.youtube.com/watch?v=1ir_nEfKQ7A&t=126s
+- A visualisation of tiling effects on matrix multiplication
+    - Naive implementation https://www.youtube.com/watch?v=QYpH-847z0E
+    - Tiled implementation, B transposed https://www.youtube.com/watch?v=aMvCEEBIBto
+    - Visible L1 cache https://www.youtube.com/watch?v=aU1zsFk36l0
+    - 2 level tiled https://www.youtube.com/watch?v=3XfHL6nlB08
+
+- Interesting blog on optimization/compilation in AI : https://www.aussieai.com/research/list, notably [this page](https://www.aussieai.com/research/compilers)
+
+Interesting optimizations:
+* Kernel fusion (aka operator fusion)
+* Loop fusion/fission
+* Tiling
+* Vectorization
+* Unrolling
+* Memory planning
+
+## Tools
+### Apache TVM : https://tvm.apache.org/ <br/>
+Installation https://tvm.apache.org/docs/install/index.html
+- Installation on Linux is very highly recommanded (possibly Docker)
+- If on windows, installation on Docker is highly recommanded. Else, good luck !
+- If targeting GPU, install CUDA : https://developer.nvidia.com/cuda-12-4-0-download-archive/?target_os=Linux (do not hesitate to follow the considered section of [NVIDIA install Documentation](https://docs.nvidia.com/cuda/cuda-installation-guide-linu))
+- For profiling, [building TVM with PAPI support](https://tvm.apache.org/docs/v0.8.0/how_to/profile/papi.html) is recommanded.
+
+Official quickstart tutorial https://mlc.ai/docs/get_started/tutorials/quick_start.html <br/>
+Quality tutorial : https://mlc.ai/chapter_introduction/index.html <br/>
+
+### Torch
+https://pytorch.org/
+
+If we want to to compare with Torch:
+- Torch Script : https://pytorch.org/docs/stable/jit.html
+- Torch Profiler : https://pytorch.org/docs/stable/profiler.html
+- Torch compile : https://pytorch.org/docs/stable/torch.compiler.html
+
+### ONNX 
+ONNX is a deep learning model format, with frontends to most deep learning frameworks and compilers https://onnx.ai/
+* Onnx model zoo : https://github.com/onnx/models
+    * MNIST CNN model : https://github.com/onnx/models/tree/main/validated/vision/classification/mnist
+    * TinyYOLOv2 : https://github.com/onnx/models/tree/main/validated/vision/object_detection_segmentation/tiny-yolov2
+
+
+### Netron
+Visualisation of an ONNX model graph https://netron.app/
+
+### MNIST CNN
+
+
+## Internship approximative planning
+Approximative planning to have vision over the next weeks, **however**, you're completely free to start experimenting right away if you feel like it.
+
+* Weeks 1 & 2 : Learning the context, reading bibliography, install the environment and the tools.
+* Weeks 3 & 4 : Experiments regarding computation time optimization
+* Weeks 5 & 6 : Experiments regarding memory optimization (peak memory consumption)
+* Weeks 7 & 8 : Analysis of the experiments results, show and explain relevant optimizations, report redaction.
