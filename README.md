@@ -29,6 +29,18 @@ This repository offers some initial documentation, references and tools in prepa
 
 [11] - Lai, R., Shao, J., Feng, S., Lyubomirsky, S. S., Hou, B., Lin, W., ... & Chen, T. (2023). Relax: composable abstractions for end-to-end dynamic machine learning. arXiv preprint arXiv:2311.02103.
 
+### Optimizations
+
+[12] - Jia, Z., Padon, O., Thomas, J., Warszawski, T., Zaharia, M., & Aiken, A. (2019, October). TASO: optimizing deep learning computation with automatic generation of graph substitutions. In Proceedings of the 27th ACM Symposium on Operating Systems Principles (pp. 47-62).
+
+[13] - Unger, C., Jia, Z., Wu, W., Lin, S., Baines, M., Narvaez, C. E. Q., ... & Aiken, A. (2022). Unity: Accelerating {DNN} training through joint optimization of algebraic transformations and parallelization. In 16th USENIX Symposium on Operating Systems Design and Implementation (OSDI 22) (pp. 267-284).
+
+[14] - Niu, W., Guan, J., Wang, Y., Agrawal, G., & Ren, B. (2021, June). Dnnfusion: accelerating deep neural networks execution with advanced operator fusion. In Proceedings of the 42nd ACM SIGPLAN International Conference on Programming Language Design and Implementation (pp. 883-898).
+
+[15] - Qiao, B., Reiche, O., Hannig, F., & Teich, J. (2019, February). From loop fusion to kernel fusion: A domain-specific approach to locality optimization. In 2019 IEEE/ACM International Symposium on Code Generation and Optimization (CGO) (pp. 242-253). IEEE.
+
+[16] - Cai, X., Wang, Y., & Zhang, L. (2022). Optimus: An operator fusion framework for deep neural networks. ACM Transactions on Embedded Computing Systems, 22(1), 1-26.
+
 ### Memory optimizations
 Incoming
 
@@ -43,7 +55,8 @@ Incoming
 - Interesting blog on optimization/compilation in AI : https://www.aussieai.com/research/list, notably [this page](https://www.aussieai.com/research/compilers)
 
 Interesting optimizations:
-* Kernel fusion (aka operator fusion)
+* Graph optimizations : [12, 13]
+* Kernel fusion (aka operator fusion) : [14, 15, 16]
 * Loop fusion/fission
 * Tiling
 * Vectorization
@@ -56,7 +69,7 @@ Installation https://tvm.apache.org/docs/install/index.html
 - Installation on Linux is very highly recommanded (possibly Docker)
 - If on windows, installation on Docker is highly recommanded. Else, good luck !
 - If targeting GPU, install CUDA : https://developer.nvidia.com/cuda-12-4-0-download-archive/?target_os=Linux (do not hesitate to follow the considered section of [NVIDIA install Documentation](https://docs.nvidia.com/cuda/cuda-installation-guide-linu))
-- For profiling, [building TVM with PAPI support](https://tvm.apache.org/docs/v0.8.0/how_to/profile/papi.html) is recommanded.
+- For profiling, [building TVM with PAPI support](https://tvm.apache.org/docs/v0.8.0/how_to/profile/papi.html) is recommended.
 
 Official quickstart tutorial https://mlc.ai/docs/get_started/tutorials/quick_start.html <br/>
 Quality tutorial : https://mlc.ai/chapter_introduction/index.html <br/>
@@ -78,8 +91,6 @@ ONNX is a deep learning model format, with frontends to most deep learning frame
 
 ### Netron
 Visualisation of an ONNX model graph https://netron.app/
-
-### MNIST CNN
 
 
 ## Internship approximative planning
