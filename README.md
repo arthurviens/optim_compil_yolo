@@ -42,7 +42,12 @@ This repository offers some initial documentation, references and tools in prepa
 [16] - Cai, X., Wang, Y., & Zhang, L. (2022). Optimus: An operator fusion framework for deep neural networks. ACM Transactions on Embedded Computing Systems, 22(1), 1-26.
 
 ### Memory optimizations
-Incoming
+[17] - Levental, M. (2022). Memory planning for deep neural networks. arXiv preprint arXiv:2203.00448.
+
+[18] - Artemev, A., An, Y., Roeder, T., & van der Wilk, M. (2022). Memory safe computations with XLA compiler. Advances in Neural Information Processing Systems, 35, 18970-18982.
+
+[19] - Pisarchyk, Y., & Lee, J. (2020). Efficient memory management for deep neural net inference. arXiv preprint arXiv:2001.03288.
+
 
 ## Other learning material
 - An interesting description of optimization and Halide : https://www.youtube.com/watch?v=1ir_nEfKQ7A&t=126s
