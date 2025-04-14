@@ -42,11 +42,13 @@ This repository offers some initial documentation, references and tools in prepa
 [16] - Cai, X., Wang, Y., & Zhang, L. (2022). Optimus: An operator fusion framework for deep neural networks. ACM Transactions on Embedded Computing Systems, 22(1), 1-26.
 
 ### Memory optimizations
-[17] - Levental, M. (2022). Memory planning for deep neural networks. arXiv preprint arXiv:2203.00448.
+
+[17] - Pisarchyk, Y., & Lee, J. (2020). Efficient memory management for deep neural net inference. arXiv preprint arXiv:2001.03288.
+
 
 [18] - Artemev, A., An, Y., Roeder, T., & van der Wilk, M. (2022). Memory safe computations with XLA compiler. Advances in Neural Information Processing Systems, 35, 18970-18982.
 
-[19] - Pisarchyk, Y., & Lee, J. (2020). Efficient memory management for deep neural net inference. arXiv preprint arXiv:2001.03288.
+[19] - Minakova, S., & Stefanov, T. (2022). Memory-Throughput Trade-off for CNN-based Applications at the Edge. ACM Transactions on Design Automation of Electronic Systems, 28(1), 1-26.
 
 
 ## Other learning material
